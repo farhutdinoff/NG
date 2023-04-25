@@ -10,7 +10,7 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="nav d-flex justify-content-between align-items-center">
+      <div class="nav d-flex justify-content-start align-items-center">
         <a href="#section-reallity" class="scrollto">
           О нас
         </a>
@@ -37,7 +37,7 @@
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <button class="btn btn-regular">
+          <button class="btn btn-regular" data-toggle="modal" data-target="#callbackModal">
             Забронировать
           </button>
         </div>
@@ -98,10 +98,16 @@
   <div class="section-description" id="section-description">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-
+        <div class="col-md-5">
+          <video controls="controls">
+            <source src="video/video.ogv" type='video/ogg; codecs="theora, vorbis"'>
+            <source src="video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+            <source src="video/video.webm" type='video/webm; codecs="vp8, vorbis"'>
+            Тег video не поддерживается вашим браузером. 
+            <a href="video/duel.mp4">Скачайте видео</a>.
+           </video>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-7">
           <div class="section-title">
             Как проходит игра?
           </div>
@@ -114,7 +120,7 @@
             к 9 интерактивным аттракционам на одной площадке. Проходите любые испытания в течение 60 минут!
           </p>
 
-          <button class="btn btn-regular">
+          <button class="btn btn-regular" data-toggle="modal" data-target="#callbackModal">
             Забронировать
           </button>
         </div>
@@ -126,7 +132,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afa7fcf4878235eba31bbac4bda0c87d371268c325ec6cba2ef13a9cd189a02c3&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afa7fcf4878235eba31bbac4bda0c87d371268c325ec6cba2ef13a9cd189a02c3&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
         <div class="col-md-6">
           <div class="section-title">
@@ -152,6 +158,39 @@
       </div>
     </div>
   </footer>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="callbackModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-content__title">
+        Хочу играть!
+      </div>
+      <form action="">
+        <input type="text" placeholder="ФИО">
+        <div class="row">
+          <div class="col-md-6">
+            <input type="number" placeholder="Телефон">
+          </div>
+          <div class="col-md-6">
+            <input type="number" placeholder="Количество игроков">
+          </div>
+        </div>
+        <div class="agePlayers">
+          Кто будет играть? <br>
+          Взрослые <input type="checkbox">
+          Дети <input type="checkbox">
+        </div>
+        <a href="#">Нажимая на кнопку вы соглашаетесь с условиями</a>
+        <button class="btn btn-regular">
+          Забронировать
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
 
   
   <script src="js/jquery-3.1.1.min.js"></script>
